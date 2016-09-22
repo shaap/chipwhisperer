@@ -95,11 +95,7 @@ class OpenADC(ScopeTemplate, Plugin):
 
     def _con(self):
         if self.scopetype is not None:
-            try:
-                self.scopetype.con()
-            except Exception:
-                print("EX")
-
+            self.scopetype.con()
             # TODO Fix this hack
             if hasattr(self.scopetype, "ser") and hasattr(self.scopetype.ser, "_usbdev"):
                 self.qtadc.sc.usbcon = self.scopetype.ser._usbdev
