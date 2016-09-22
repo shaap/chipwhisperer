@@ -87,6 +87,8 @@ class OpenADCInterface_ZTEX(Parameterized, Plugin):
             raise IOError("OpenADC Error (FX2 Port): " + (str(exctype) + str(value)) + " - Did you download firmware/FPGA data to ChipWhisperer?")
 
     def dis(self):
+        usb.util.dispose_resources(self.dev)
+        self.dev = None
         self.ser = None
 
     def __del__(self):
