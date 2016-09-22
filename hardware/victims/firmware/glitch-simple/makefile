@@ -31,13 +31,13 @@
 ######### Specify your platform here
 
 #Multi-Target Board, AVR Device (ATMega328P)
-#PLATFORM = CW301_AVR
+PLATFORM = CW301_AVR
 
 #Multi-Target Board, XMEGA Device
 #PLATFORM = CW301_XMEGA
 
 #CW-Lite XMEGA Target Device (XMEGA128D4)
-PLATFORM = CW303
+#PLATFORM = CW303
 
 #NOTDUINO Kit (ATMega328P)
 #PLATFORM = CW304
@@ -263,7 +263,7 @@ LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
 # Type: avrdude -c ?
 # to get a full listing.
 #
-AVRDUDE_PROGRAMMER = jtag2isp
+AVRDUDE_PROGRAMMER = avrisp2
 
 # com1 = serial port. Use lpt1 to connect to parallel port.
 AVRDUDE_PORT = usb    # programmer connected to serial device
