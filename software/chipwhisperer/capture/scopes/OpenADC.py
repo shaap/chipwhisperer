@@ -95,7 +95,10 @@ class OpenADC(ScopeTemplate, Plugin):
 
     def _con(self):
         if self.scopetype is not None:
-            self.scopetype.con()
+            try:
+                self.scopetype.con()
+            except Exception:
+                print("EX")
 
             # TODO Fix this hack
             if hasattr(self.scopetype, "ser") and hasattr(self.scopetype.ser, "_usbdev"):
