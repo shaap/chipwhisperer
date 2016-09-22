@@ -17,3 +17,8 @@ If you are looking for a discussion channel see http://www.newae.com/forum .
 
 
 ChipWhisperer is a trademark of NewAE Technology Inc., registered in the US and Europe.
+
+shaap edit
+=====================
+
+Modifications for CWRev2
