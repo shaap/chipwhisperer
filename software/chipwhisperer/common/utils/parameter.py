@@ -659,7 +659,7 @@ class Parameter(object):
                     continue
 
                 if child.getType() == "int":
-                    value = int(value)
+                    value = int(float(value))
                 elif child.getType() == "float":
                     value = float(value)
                 elif child.getType() == "menu" or child.getType() == "label" or child.getType() == "color":
